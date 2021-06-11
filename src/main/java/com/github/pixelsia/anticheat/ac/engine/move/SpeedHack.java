@@ -1,6 +1,6 @@
 package com.github.pixelsia.anticheat.ac.engine.move;
 
-import com.github.pixelsia.anticheat.ac.engine.MoveCheckElement;
+import com.github.pixelsia.anticheat.ac.engine.elements.MoveCheckElement;
 import com.github.pixelsia.anticheat.ac.engine.manager.MoveLog;
 import com.github.pixelsia.anticheat.ac.engine.manager.SpeedHackManager;
 import org.bukkit.event.player.PlayerMoveEvent;
