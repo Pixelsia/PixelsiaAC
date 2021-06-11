@@ -3,7 +3,13 @@ package com.github.pixelsia.anticheat.ac.engine;
 import com.github.pixelsia.anticheat.ac.Kei;
 import com.github.pixelsia.anticheat.ac.PixelsiaAC;
 import com.github.pixelsia.anticheat.ac.engine.elements.MoveCheckElement;
+import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
+import tokyo.peya.lib.PixelTone;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,8 +34,9 @@ public class ACEngine {
     }
 
     public static void KickPlayer(Player p, ACKickReason reason){
-        String r = "KickReason: " + reason.getReason();
-        p.kickPlayer(r);
+        PixelTone.kickPlayer(PixelsiaAC.instance, p, PixelTone.KickType.CHEAT.setReason(reason.getReason()));
+
         Kei.out("AC: KickPlayer(" + p.getName() + ") [" + reason.getConsoleReason() + "]");
+
     }
 }
