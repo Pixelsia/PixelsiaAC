@@ -1,0 +1,6 @@
+name: PixelsiaAC
+version: ${project.version}
+main: com.github.pixelsia.anticheat.ac.PixelsiaAC
+api-version: 1.16
+load: STARTUP
+authors: [ Kei ]
